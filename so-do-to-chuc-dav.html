@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Sơ đồ tổ chức</title>
+  <style>
+    body {
+      background: #fff;
+      font-family: Arial, sans-serif;
+    }
+
+    .org-chart {
+      max-width: 1800px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+
+    .level {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .level-1 .box {
+      min-width: 300px;
+    }
+
+    .level-2 .box {
+      min-width: 220px;
+    }
+
+    .level-3 .box {
+      min-width: 180px;
+    }
+
+    .level-4 {
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      gap: 12px;
+    }
+
+    .dept-col {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      min-width: 220px;
+      margin: 0 3px;
+    }
+
+    .box,
+    .sub-box {
+      border: 2px solid #222;
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 3px;
+      border-radius: 4px;
+      box-shadow: 1px 2px 0 #bbb;
+    }
+
+    .box {
+      padding: 8px 5px;
+      font-size: 1em;
+      margin-bottom: 6px;
+    }
+
+    .sub-box {
+      background: #e6f2ff;
+      color: #1c4e80;
+      border-color: #1c4e80;
+      font-size: 0.97em;
+      font-weight: normal;
+      padding: 7px 3px;
+    }
+
+    .orange {
+      background: #ed7d31;
+      color: #fff;
+      border-color: #b95a07;
+    }
+
+    .yellow {
+      background: #ffe699;
+      color: #b95a07;
+      border-color: #bca547;
+    }
+
+    .gray {
+      background: #d9d9d9;
+      color: #222;
+      border-color: #999;
+    }
+
+    .green {
+      background: #c6efce;
+      color: #276135;
+      border-color: #5ab267;
+    }
+
+    .blue {
+      background: #e6f2ff;
+      color: #1c4e80;
+      border-color: #1c4e80;
+    }
+
+    @media (max-width: 1200px) {
+      .level-4 {
+        flex-wrap: wrap;
+        overflow-x: visible;
+        justify-content: flex-start;
+      }
+      .dept-col {
+        min-width: 220px;
+        flex: 1 1 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="org-chart">
+    <!-- Top level -->
+    <div class="level level-1">
+      <div class="box orange">ĐẢNG ỦY HỌC VIỆN</div>
+    </div>
+    <!-- Second level -->
+    <div class="level level-2">
+      <div class="box yellow">HỘI ĐỒNG HỌC VIỆN NGOẠI GIAO</div>
+      <div class="box yellow">HỘI ĐỒNG KHOA HỌC VÀ ĐÀO TẠO</div>
+      <div class="box yellow">BAN GIÁM ĐỐC HỌC VIỆN NGOẠI GIAO</div>
+    </div>
+    <!-- Third level -->
+    <div class="level level-3">
+      <div class="box gray">ĐOÀN THANH NIÊN</div>
+      <div class="box gray">CÔNG ĐOÀN</div>
+    </div>
+    <!-- Main departments -->
+    <div class="level level-4">
+      <div class="dept-col">
+        <div class="box green">VIỆN NGHIÊN CỨU CHIẾN LƯỢC NGOẠI GIAO</div>
+        <div class="sub-box blue">Trung tâm Các nước lớn</div>
+        <div class="sub-box blue">Trung tâm Khu vực</div>
+        <div class="sub-box blue">Trung tâm An ninh và Phát triển</div>
+        <div class="sub-box blue">Trung tâm Lịch sử và Lý luận Ngoại giao</div>
+      </div>
+      <div class="dept-col">
+        <div class="box green">VIỆN BIỂN ĐÔNG</div>
+        <div class="sub-box blue">Trung tâm Pháp lý</div>
+        <div class="sub-box blue">Trung tâm Chính trị và An ninh</div>
+        <div class="sub-box blue">Trung tâm Hợp tác và Ngoại giao biển</div>
+        <div class="sub-box blue">Trung tâm Thông tin và Tư liệu</div>
+      </div>
+      <div class="dept-col">
+        <div class="box green">BAN ĐÀO TẠO ĐẠI HỌC VÀ SAU ĐẠI HỌC</div>
+        <div class="sub-box blue">Phòng Tuyển sinh</div>
+        <div class="sub-box blue">Phòng Đào tạo đại học</div>
+        <div class="sub-box blue">Phòng Đào tạo sau đại học</div>
+        <div class="sub-box blue">Phòng Công tác chính trị và quản lý sinh viên</div>
+        <div class="sub-box blue">Phòng Liên kết đào tạo quốc tế</div>
+      </div>
+      <div class="dept-col">
+        <div class="box green">BAN ĐÀO TẠO, BỒI DƯỠNG CÁN BỘ ĐỐI NGOẠI</div>
+        <div class="sub-box blue">Phòng Kế hoạch – Tổng hợp</div>
+        <div class="sub-box blue">Phòng Nghiệp vụ đối ngoại</div>
+        <div class="sub-box blue">Phòng Ngoại ngữ - Biên phiên dịch</div>
+      </div>
+      <div class="dept-col">
+        <div class="box green">BAN KHOA HỌC, THÔNG TIN VÀ TẠP CHÍ NGHIÊN CỨU QUỐC TẾ</div>
+        <div class="sub-box blue">Phòng Quản lý khoa học</div>
+        <div class="sub-box blue">Phòng Công nghệ Thông tin</div>
+        <div class="sub-box blue">Phòng Lưu trữ, Thư viện</div>
+        <div class="sub-box blue">Phòng Biên tập, Trị sự và Tạp chí Nghiên cứu Quốc tế</div>
+      </div>
+      <div class="dept-col">
+        <div class="box green">VĂN PHÒNG</div>
+        <div class="sub-box blue">Phòng Hành chính – Tổng hợp</div>
+        <div class="sub-box blue">Phòng Hợp tác quốc tế</div>
+        <div class="sub-box blue">Phòng Tổ chức Cán bộ</div>
+        <div class="sub-box blue">Phòng Quản trị - Tài vụ</div>
+        <div class="sub-box blue">Phòng Thanh tra – Pháp chế và Kiểm toán nội bộ</div>
+      </div>
+      <div class="dept-col">
+        <div class="box green">KHOA CHÍNH TRỊ QUỐC TẾ NGOẠI GIAO</div>
+        <div class="sub-box blue">Bộ môn Chính sách đối ngoại và Ngoại giao Việt Nam</div>
+        <div class="sub-box blue">Bộ môn Chính trị quốc tế</div>
+        <div class="sub-box blue">Bộ môn Kỹ năng nghiệp vụ đối ngoại</div>
+        <div class="sub-box blue">Bộ môn Lý luận chính trị và Khoa học cơ bản</div>
+      </div>
+      <div class="dept-col">
+        <div class="box green">KHOA LUẬT QUỐC TẾ</div>
+        <div class="sub-box blue">Bộ môn Pháp luật quốc tế</div>
+        <div class="sub-box blue">Bộ môn Luật thương mại quốc tế</div>
+        <div class="sub-box blue">Bộ môn Pháp luật Việt Nam và các nước</div>
+        <div class="sub-box blue">Trung tâm Thực hành pháp luật</div>
+      </div>
+      <div class="dept-col">
+        <div class="box green">KHOA KINH TẾ QUỐC TẾ</div>
+        <div class="sub-box blue">Bộ môn Logistics và quản lý chuỗi cung ứng</div>
+        <div class="sub-box blue">Bộ môn Marketing quốc tế</div>
+        <div class="sub-box blue">Bộ môn Tài chính quốc tế</div>
+        <div class="sub-box blue">Bộ môn Thương mại quốc tế</div>
+      </div>
+      <div class="dept-col">
+        <div class="box green">KHOA TRUYỀN THÔNG VÀ VĂN HÓA ĐỐI NGOẠI</div>
+        <div class="sub-box blue">Bộ môn Báo chí – Truyền thông quốc tế</div>
+        <div class="sub-box blue">Bộ môn Quan hệ công chúng – Marketing quốc tế</div>
+        <div class="sub-box blue">Bộ môn Văn hóa đối ngoại – Truyền thông văn hóa</div>
+      </div>
+      <div class="dept-col">
+        <div class="box green">KHOA NGOẠI NGỮ</div>
+        <div class="sub-box blue">Bộ môn Tiếng Anh</div>
+        <div class="sub-box blue">Bộ môn Tiếng Hàn Quốc</div>
+        <div class="sub-box blue">Bộ môn Tiếng Nhật Bản</div>
+        <div class="sub-box blue">Bộ môn Tiếng Trung Quốc</div>
+        <div class="sub-box blue">Bộ môn Các ngoại ngữ khác</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
